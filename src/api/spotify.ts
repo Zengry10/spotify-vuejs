@@ -1,6 +1,6 @@
 import { instance } from './index';
 
-export function search(query: string, type: string, limit = 10) {
+export function album(query: string, type: string, limit = 11) {
   return instance.get('/search', {
     params: {
       q: query,
@@ -11,4 +11,15 @@ export function search(query: string, type: string, limit = 10) {
   .then(response => {
     return response.data;
   })
+
+
+}
+
+export function AlbumID(id: string) {
+  return instance.get(`/albums/${id}`)
+  .then(response => {
+    return response.data;
+  })
+
+
 }

@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { search } from '@/api/spotify';
+import { album } from '@/api/spotify';
 
 const response = ref([]);
 
 async function init() {
-  response.value = await search('Flume', 'artist')
+  response.value = await album('Flume', 'artist')
 }
 
 init()

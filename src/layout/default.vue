@@ -9,7 +9,7 @@ console.log(token)
 
 <template>
   <div class="layout h-screen overflow-hidden flex flex-col">
-    <nav class="h-20 p-4 bg-stone-500 shrink-0 flex  justify-between">
+    <nav class="h-20 p-4 bg-zinc-900 shrink-0 flex  justify-between">
       <img src='../../public/img/Spotify_Logo_Black.png' class="h-8 w-26">
       
       <div v-if="token" class="relative">
@@ -37,8 +37,7 @@ console.log(token)
     <div class="flex-grow overflow-y-auto">
       <router-view></router-view>
     </div>
-    <div class="h-20 bg-slate-400 shrink-0 flex items-center justify-center">
-      Player
+    <div class="h-20 bg-zinc-900 shrink-0 flex items-center justify-center">
     </div>
   </div>
 </template>
