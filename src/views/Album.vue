@@ -38,7 +38,6 @@ init()
                     <div v-for="album in response.albums.items" class=" mb-12 hover:bg-zinc-900 hover:duration-300 rounded-t-lg" key="album.id">
                         <a :href="'/album/' + album.id">
                             <img :src="album.images[0].url" alt="" class="h-72 w-68 rounded-t-lg ">
-                            <p class="text-slate-50">{{album.id}}</p>
                             <p class="text-slate-50 text-lg pl-2 mt-2">{{album.name}}</p>
                             <p class="text-slate-500 pl-2">par {{album.artists[0].name}}</p>
                             <p class="text-slate-50 pl-2">{{album.release_date}}</p>
