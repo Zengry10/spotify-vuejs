@@ -20,6 +20,11 @@ export function AlbumID(id: string) {
   .then(response => {
     return response.data;
   })
-
+}
+export function TopTrack(id: string){
+  return instance.get(`/artists/${id}/top-tracks`)
+  .then(response => {
+    return response.data
+  })
 
 }

@@ -51,7 +51,8 @@ init()
                         <div class="">
                             <p class="text-lg text-white"> {{ album.name }}</p>   
                             <div v-for="artist in album.artists">
-                                <h4 class="text-white text-slate-600">{{ artist.name }}</h4>
+                                <a :href="'/ArtistTopTrack/' + artist.id"><h4 class="text-white text-slate-600">{{ artist.name }}</h4></a>
+                                <p class="text-white">{{ artist.id}}</p>
                             </div>
                         </div>
                     </div>
