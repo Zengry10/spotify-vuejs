@@ -24,7 +24,7 @@ construct()
 
 <template>
     <div v-if="(response && response.name)">
-       <div class="w-full bg-no-repeat h-72 bg-cover bg-center" :style="{backgroundImage:`url(${response.images[0].url})`}">
+       <div v-if="response" class="w-full bg-no-repeat h-72 bg-cover bg-center" :style="{backgroundImage:`url(${response.images[0].url})`}">
             <div class="ml-12 pt-4">
             <p class="text-8xl font-bold text-white ">{{ response.name }}</p>
             <p class="mt-12 text-white text-lg">{{ response.followers.total }} fans</p>
