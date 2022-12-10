@@ -22,9 +22,16 @@ export function AlbumID(id: string) {
   })
 }
 export function TopTrack(id: string){
-  return instance.get(`/artists/${id}/top-tracks`)
+  return instance.get(`/artists/${id}/top-tracks?market=FR`)
   .then(response => {
     return response.data
   })
 
+}
+
+export function GetArtist(id: string){
+  return instance.get(`/artists/${id}`)
+  .then(response => {
+    return response.data
+  })
 }
