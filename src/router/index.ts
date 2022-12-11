@@ -5,7 +5,7 @@ import Login from '../views/Login.vue'
 import Callback from '../views/Callback.vue'
 import Album from '../views/Album.vue'
 import AlbumID from '../views/AlbumID.vue'
-import ArtistTopTrack from '../views/ArtistTopTrack.vue'
+import Artist from '../views/Artist.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,15 +22,12 @@ const router = createRouter({
     },
     {
       path: '/',
+      redirect: '/search',
       component: DefaultLayout,
       children: [
+
         {
-          path: '/',
-          name: 'home',
-          component: HomeView,
-        },
-        {
-          path: '/album',
+          path: '/search',
           name: 'album',
           component: Album,
         },
@@ -40,9 +37,9 @@ const router = createRouter({
           component: AlbumID,
         },
         {
-          path: '/ArtistTopTrack/:id/',
-          name: 'ArtistTopTrack',
-          component: ArtistTopTrack,
+          path: '/Artist/:id/',
+          name: 'Artist',
+          component: Artist,
         },
       ]
     },

@@ -8,9 +8,9 @@ console.log(token)
 </script>
 
 <template>
-  <div class="layout h-screen overflow-hidden flex flex-col">
+  <div class="layout h-screen overflow-hidden flex flex-col ">
     <nav class="h-20 p-4 bg-zinc-900 shrink-0 flex  justify-between">
-      <img src='../../public/img/Spotify_Logo_Black.png' class="h-8 w-26">
+      <a href="/"> <img src='../../public/img/Spotify_Logo_Black.png' class="h-8 w-26"></a>
       
       <div v-if="token" class="relative">
         <button @click="showDropdown = true" class="bg-zinc-800 rounded-full py-1 px-2 flex items-center">
@@ -34,10 +34,18 @@ console.log(token)
       </div>
     </nav>
 
-    <div class="flex-grow overflow-y-auto">
+    <div class="flex-grow overflow-y-auto bg-black">
       <router-view></router-view>
     </div>
     <div class="h-20 bg-zinc-900 shrink-0 flex items-center justify-center">
+      <audio
+        class="w-2/12"
+        controls
+        src="/media/cc0-audio/t-rex-roar.mp3">
+            <a href="/media/cc0-audio/t-rex-roar.mp3">
+                Download audio
+            </a>
+    </audio>
     </div>
   </div>
 </template>

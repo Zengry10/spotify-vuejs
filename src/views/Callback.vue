@@ -9,6 +9,6 @@ const token = params.get('access_token')!;
 localStorage.setItem('spotifyToken', token);
 
 router.push({
-  name: 'home',
+  name: 'album',
 });
 </script>
