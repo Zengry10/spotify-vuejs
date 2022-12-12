@@ -276,10 +276,10 @@
     "@vue/compiler-dom" "3.2.40"
     "@vue/shared" "3.2.40"
 
-"@vue/devtools-api@^6.1.4", "@vue/devtools-api@^6.2.1":
-  "integrity" "sha512-9WCRwdROJvWcHAdyrR7SZMM/qUvllDZnpndHXokThkUsjnJ2xe4/pvsH9FZrxFe22L+JmDKczL79HjLJ7DK9rg=="
-  "resolved" "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.4.3.tgz"
-  "version" "6.4.3"
+"@vue/devtools-api@^6.1.4", "@vue/devtools-api@^6.4.5":
+  "integrity" "sha512-JD5fcdIuFxU4fQyXUu3w2KpAJHzTVdN+p4iOX2lMWSHMOoQdMAcpFLZzm9Z/2nmsoZ1a96QEhZ26e50xLBsgOQ=="
+  "resolved" "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.4.5.tgz"
+  "version" "6.4.5"
 
 "@vue/eslint-config-typescript@^11.0.0":
   "integrity" "sha512-EiKud1NqlWmSapBFkeSrE994qpKx7/27uCGnhdqzllYDpQZroyX/O6bwjEpeuyKamvLbsGdO6PMR2faIf+zFnw=="
@@ -1647,12 +1647,12 @@
   "resolved" "https://registry.npmjs.org/pify/-/pify-3.0.0.tgz"
   "version" "3.0.0"
 
-"pinia@^2.0.21":
-  "integrity" "sha512-u+b8/BC+tmvo3ACbYO2w5NfxHWFOjvvw9DQnyT0dW8aUMCPRQT5QnfZ5R5W2MzZBMTeZRMQI7V/QFbafmM9QHw=="
-  "resolved" "https://registry.npmjs.org/pinia/-/pinia-2.0.22.tgz"
-  "version" "2.0.22"
+"pinia@^2.0.28":
+  "integrity" "sha512-YClq9DkqCblq9rlyUual7ezMu/iICWdBtfJrDt4oWU9Zxpijyz7xB2xTwx57DaBQ96UGvvTMORzALr+iO5PVMw=="
+  "resolved" "https://registry.npmjs.org/pinia/-/pinia-2.0.28.tgz"
+  "version" "2.0.28"
   dependencies:
-    "@vue/devtools-api" "^6.2.1"
+    "@vue/devtools-api" "^6.4.5"
     "vue-demi" "*"
 
 "postcss-import@^14.1.0":

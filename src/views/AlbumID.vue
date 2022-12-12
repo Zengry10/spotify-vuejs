@@ -2,6 +2,11 @@
 import { useRoute } from 'vue-router'
 import { AlbumID } from '@/api/spotify'
 import { ref } from 'vue'
+import { GetArtist } from '@/api/spotify'
+import { Store } from '@/stores/StorePlayer'
+
+const store = Store()
+
 
 
 const response = ref([])
@@ -48,7 +53,7 @@ init()
         <div class="bg-black  pl-12 pt-12">
 
             <div v-if="response && response.tracks">
-                <div v-for="album in response.tracks.items" class="flex justify-between hover:bg-[#111827] rounded-lg duration-300 p-2 w-full ">
+                <div @click='store.setSongUrl(album.preview_url)' v-for="album in response.tracks.items" class="flex cursor-pointer justify-between hover:bg-[#111827] rounded-lg duration-300 p-2 w-full ">
                     <div class="flex">
                         <p class=" text-slate-600 mt-3 mr-12"> {{ album.track_number }}</p>
                         <div class="">

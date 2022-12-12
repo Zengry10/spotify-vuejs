@@ -3,6 +3,9 @@ import { useRoute } from 'vue-router'
 import { TopTrack } from '@/api/spotify'
 import { ref } from 'vue'
 import { GetArtist } from '@/api/spotify'
+import { Store } from '@/stores/StorePlayer'
+
+const store = Store()
 
 const responseGetArtist = ref([])
 const responseTrack = ref([])
@@ -39,8 +42,7 @@ construct()
 
         </div>
        
-
-        <div v-for="(tracks, id) in responseTrack.tracks.slice(0, 5)" class="flex ml-6 justify-between hover:bg-[#111827] rounded-lg duration-300 p-2">
+        <div @click='store.setSongUrl(tracks.preview_url)' v-for="(tracks, id) in responseTrack.tracks.slice(0, 5)" class="flex cursor-pointer ml-6 justify-between hover:bg-[#111827] rounded-lg duration-300 p-2">
             <div class="flex justify-center	items-center text-white ml-4">
                 <p class="mr-6 text-slate-400">{{ id +1 }}</p>
                 <img :src="tracks.album.images[0].url" class="h-12 w-12 mr-4 ml-4">
@@ -51,11 +53,6 @@ construct()
                 <p class=" mr-28 text-slate-400" >{{ Math.floor((tracks.duration_ms/1000/60) << 0)}}:<span v-if="Math.floor((tracks.duration_ms/1000) % 60) < 10">0</span>{{ Math.floor((tracks.duration_ms/1000) % 60)}}</p>
             </div>
 
-        </div>
-
-            
-            
-       
-        
+        </div>  
     </div>
 </template>
