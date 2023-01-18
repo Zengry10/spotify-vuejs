@@ -23,6 +23,7 @@ const router = createRouter({
     {
       path: '/',
       redirect: '/search',
+      name: 'search',
       component: DefaultLayout,
       children: [
 
